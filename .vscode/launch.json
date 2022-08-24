@@ -8,7 +8,7 @@
             "name": "BrightScript Debug: Launch",
             "type": "brightscript",
             "request": "launch",
-            "host": "172.20.10.3",
+            "host": "172.20.10.19",
             "password": "apex",
             "rootDir": "${workspaceFolder}"
         }
