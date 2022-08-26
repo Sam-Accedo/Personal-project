@@ -4,8 +4,6 @@ end function
 
 function getcontent() as void
     content = createObject("roSGNode", "ContentNode")
-    print content
-
     readInternet = createObject("roUrlTransfer")
     readInternet.setUrl(m.top.contenturi)
     Videos = ParseJson(readInternet.GetToString())
@@ -21,7 +19,8 @@ function getcontent() as void
         formattedEntry.HDPOSTERURL = entry.image.href
         formattedEntry.SHORTDESCRIPTIONLINE1 = entry.title
         formattedEntry.SHORTDESCRIPTIONLINE2 = entry.summary
-
+        formattedEntry.url = entry.stream.href
+        
         content.appendChild(formattedEntry)
 
         ' age_rating = entry.ageRating

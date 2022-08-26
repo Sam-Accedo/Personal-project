@@ -12,16 +12,44 @@
             numColumns = "3"
             numRows = "1"
             itemSpacing ="[20, 20]"
+          
         />
+        
+        <Video
+          id = "video"
+          width="0.0"
+          height="0.0"
+          enableUI="true"
+          enableTrickPlay = "true"
+          bifDisplay = "0xFFFFFFFF"
+          trickPlayBar = "0xFFFFFFFF"
+          bufferingTextColor = "0x0"
+          retrievingTextColor = "0x0"
+          visible = "false"
+          />
+
         <CustomButton
           id="PinButton"
-          text="Pin"
+          text="Enable Pin"
           translation="[10, 10]"  
-          width="100"
+          width="150"
           height="50"
           />
-          
-
+        
+        <PinPad
+          id = "Pinpad"
+          pinLength = "4"
+          translation="[960, 360]"
+          visible = "false"
+        />
+        <Label
+          id = "error"
+          text = "That is the wrong password try again"
+          width = "500"
+          height = "50"
+          translation = "[500, 360]"
+          visible = "false"
+        />
     </children>
 
 <script type="text/brightscript" uri="pkg:/components/Postergrid.brs"/>
